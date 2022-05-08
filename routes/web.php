@@ -1,9 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TypeAccountController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,5 @@ Route::post('contas/adicionar', [AccountController::class, 'store'])->name('acco
 Route::get('conta/editar/{account}', [AccountController::class, 'edit'])->name('account.edit');
 Route::put('conta/editar/{account}', [AccountController::class, 'update'])->name('account.update');
 Route::get('conta/excluir/{account}', [AccountController::class, 'destroy'])->name('account.destroy');
+
+Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
