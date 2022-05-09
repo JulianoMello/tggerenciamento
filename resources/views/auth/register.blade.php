@@ -20,6 +20,16 @@
             </div>
 
             <div class="mt-4">
+                <x-jet-label for="password" value="{{ __('CPF / CNPJ') }}" />
+                <x-jet-input id="cpf" class="block mt-1 w-full" type="text" name="cpf_cnpj" required />
+            </div>
+            
+            <div class="mt-4">
+                <x-jet-label for="email" value="{{ __('Telefone') }}" />
+                <x-jet-input id="telefone" class="block mt-1 w-full" type="phone" name="telefone" required />
+            </div>
+
+            <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
